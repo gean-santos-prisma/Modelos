@@ -126,22 +126,22 @@ Catálogo de desenvolvimento — lista das páginas em construção.
 
 ```
 astri-ri/
-├── public/
-├── src/
-│   ├── index.html                       # Home
-│   ├── pages/
-│   │   ├── central-resultados-v1.html
-│   │   └── sumario.html
-│   ├── scripts/
-│   │   ├── home.js                      # Slider + handlers de formulário
-│   │   └── central-resultados-v1.js     # Filtro + render da tabela
-│   └── styles/
-│       ├── main.scss                    # entrypoint
-│       ├── abstracts/                   # tokens (cores, type, spacing, breakpoints, mixins)
-│       ├── base/                        # reset, :root (CSS vars), tipografia
-│       ├── layouts/                     # header, footer
-│       ├── components/                  # button, select, file-icon, form, card
-│       └── pages/                       # estilos específicos por página
+├── index.html                       # Home (página principal, na raiz)
+├── pages/
+│   ├── central-resultados-v1.html
+│   └── sumario.html
+├── scripts/
+│   ├── home.js                      # Slider + handlers de formulário
+│   └── central-resultados-v1.js     # Filtro + render da tabela
+├── styles/
+│   ├── main.scss                    # entrypoint
+│   ├── abstracts/                   # tokens (cores, type, spacing, breakpoints, mixins)
+│   ├── base/                        # reset, :root (CSS vars), tipografia
+│   ├── layouts/                     # header, footer
+│   ├── components/                  # button, select, file-icon, form, card
+│   └── pages/                       # estilos específicos por página
+├── assets/                          # imagens, fontes locais, etc.
+├── public/                          # assets estáticos copiados como-estão
 ├── vite.config.js
 ├── vercel.json
 └── package.json
@@ -151,10 +151,10 @@ astri-ri/
 
 ## Adicionando uma nova página
 
-1. Crie o HTML em `src/pages/minha-pagina.html`.
-2. Crie os estilos em `src/styles/pages/_minha-pagina.scss` e registre em `pages/_index.scss`.
-3. Crie o script (opcional) em `src/scripts/minha-pagina.js`.
+1. Crie o HTML em `pages/minha-pagina.html`.
+2. Crie os estilos em `styles/pages/_minha-pagina.scss` e registre em `pages/_index.scss`.
+3. Crie o script (opcional) em `scripts/minha-pagina.js`.
 4. Adicione a entrada em `vite.config.js > rollupOptions.input`.
-5. Adicione um card no sumário (`src/pages/sumario.html`).
+5. Adicione um card no sumário (`pages/sumario.html`).
 
 A página herda automaticamente os breakpoints, cores e tipografia. Use `@include container` no wrapper principal e `@include section` em seções para herdar o spacing padrão.

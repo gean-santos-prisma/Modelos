@@ -2,18 +2,18 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  root: 'src',
-  publicDir: '../public',
+  // Raiz do projeto = raiz do repo. O index.html mora aqui.
+  publicDir: 'public',
   build: {
-    outDir: '../dist',
+    outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        // Home é a página principal (index.html)
-        main: resolve(__dirname, 'src/index.html'),
-        // Demais páginas registradas aqui
-        sumario: resolve(__dirname, 'src/pages/sumario.html'),
-        centralResultadosV1: resolve(__dirname, 'src/pages/central-resultados-v1.html'),
+        // Home (página principal)
+        main: resolve(__dirname, 'index.html'),
+        // Demais páginas
+        sumario: resolve(__dirname, 'pages/sumario.html'),
+        centralResultadosV1: resolve(__dirname, 'pages/central-resultados-v1.html'),
       },
     },
   },
