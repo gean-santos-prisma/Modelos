@@ -1,0 +1,57 @@
+@use '../abstracts' as *;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--color-divider);
+
+  &__inner {
+    @include container;
+    @include flex-between;
+    height: 72px;
+  }
+
+  &__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-2;
+    font-family: var(--font-family-display);
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    letter-spacing: $letter-spacing-tight;
+    color: var(--color-secondary-500);
+
+    &-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: $radius-sm;
+      background-color: var(--color-primary-500);
+      color: var(--color-gray-950);
+      font-family: var(--font-family-base);
+      font-size: $font-size-md;
+      font-weight: $font-weight-black;
+    }
+  }
+
+  &__nav {
+    display: none;
+    gap: $spacing-6;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+
+    @include respond-up(md) { display: inline-flex; align-items: center; }
+
+    a {
+      color: var(--color-text-muted);
+      transition: color $transition-fast;
+      &:hover, &[aria-current='page'] { color: var(--color-secondary-500); }
+    }
+  }
+}
