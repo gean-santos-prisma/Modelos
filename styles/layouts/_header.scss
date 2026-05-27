@@ -18,26 +18,12 @@
   &__brand {
     display: inline-flex;
     align-items: center;
-    gap: $spacing-2;
-    font-family: var(--font-family-display);
-    font-size: $font-size-xl;
-    font-weight: $font-weight-bold;
-    letter-spacing: $letter-spacing-tight;
-    color: var(--color-secondary-500);
+  }
 
-    &-mark {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      border-radius: $radius-sm;
-      background-color: var(--color-primary-500);
-      color: var(--color-gray-950);
-      font-family: var(--font-family-base);
-      font-size: $font-size-md;
-      font-weight: $font-weight-black;
-    }
+  &__logo {
+    height: 36px;
+    width: auto;
+    display: block;
   }
 
   &__nav {
