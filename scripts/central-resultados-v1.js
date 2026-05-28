@@ -1,5 +1,6 @@
 // =============================================================================
 // CENTRAL DE RESULTADOS — Versão 1
+import { mountNavbar } from './navbar.js';
 //
 // Estrutura (conforme briefing):
 //   - Cabeçalho com primeira célula em branco, depois 4T(ano), 3T(ano),
@@ -137,6 +138,7 @@ function render(year) {
 // -----------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', () => {
+  mountNavbar();
   const select = document.querySelector('[data-results-filter]');
   if (!select) return;
 

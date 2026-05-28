@@ -218,6 +218,17 @@
       opacity $transition-base,
       transform $transition-base,
       visibility $transition-base;
+
+    // Ponte transparente que preenche o gap entre o trigger e o dropdown,
+    // mantendo o :hover do item pai ativo enquanto o mouse atravessa o espaço.
+    &::before {
+      content: '';
+      position: absolute;
+      top: -$spacing-2;
+      left: 0;
+      right: 0;
+      height: $spacing-2;
+    }
   }
 
   &__link {
