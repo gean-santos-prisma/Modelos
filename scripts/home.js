@@ -2,7 +2,8 @@
 // HOME — Slider do banner + handlers dos formulários
 // =============================================================================
 
-import './nav.js';
+import { mountNavbar } from './navbar.js';
+import { mountFooter } from './footer.js';
 
 /* -----------------------------------------------------------------------------
  * SLIDER do banner
@@ -199,6 +200,8 @@ function initForms() {
 
 // ---- Init
 document.addEventListener('DOMContentLoaded', () => {
+  mountNavbar();
+  mountFooter();
   initHeroSlider();
   initForms();
 });

@@ -2,9 +2,7 @@
 // NAV — Hamburger + Dropdowns (mobile click, desktop hover/keyboard)
 // =============================================================================
 
-document.addEventListener('DOMContentLoaded', initNav);
-
-function initNav() {
+export function initNav() {
   const hamburger = document.querySelector('[data-nav-hamburger]');
   const nav       = document.querySelector('[data-nav]');
   const triggers  = Array.from(document.querySelectorAll('[data-nav-trigger]'));
