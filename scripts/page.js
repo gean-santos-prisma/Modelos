@@ -3,5 +3,9 @@
 // =============================================================================
 
 import { mountNavbar } from './navbar.js';
+import { mountFooter } from './footer.js';
 
-document.addEventListener('DOMContentLoaded', mountNavbar);
+document.addEventListener('DOMContentLoaded', () => {
+  mountNavbar();
+  mountFooter();
+});

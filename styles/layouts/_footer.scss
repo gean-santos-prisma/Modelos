@@ -8,13 +8,29 @@
 
   &__inner { @include container; }
 
+  // Linha externa: brand (esq.) + bloco de nav (dir.)
   &__grid {
     display: grid;
     gap: $spacing-10;
     grid-template-columns: 1fr;
     margin-bottom: $spacing-12;
 
-    @include respond-up(md) { grid-template-columns: 2fr 1fr 1fr 1fr; gap: $spacing-8; }
+    @include respond-up(desktop) {
+      grid-template-columns: 1.75fr 1fr;
+      gap: $spacing-12;
+      align-items: start;
+    }
+  }
+
+  // Bloco de nav: 5 colunas de links
+  &__nav-grid {
+    display: grid;
+    gap: $spacing-8;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include respond-up(tablet)  { grid-template-columns: repeat(3, 1fr); }
+    @include respond-up(desktop) { grid-template-columns: repeat(3, 1fr); gap: $spacing-6; }
+    @include respond-up(large)   { grid-template-columns: repeat(5, 1fr); }
   }
 
   &__block {
